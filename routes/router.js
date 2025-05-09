@@ -1,8 +1,12 @@
 const exp = require('express')
-const modeloProducto = require('../src/models/producto')
 const router = exp.Router();
 const controladorProductos = require('../src/controller/producto.controller')
+const controladorVendedor = require('../src/controller/vendedor.controller')
 
-router.get('/productos',controladorProductos.consultar);
+router.get('/vendedores',controladorVendedor.registrar)
+router.get('/productos',controladorVendedor.consultar)
+
+//router.get('/productos',controladorProductos.consultar);
+
 
 module.exports = router

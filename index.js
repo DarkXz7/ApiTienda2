@@ -6,10 +6,7 @@ const app = exp()
 app.use(exp.urlencoded({extended:false}))
 app.use(exp.json())
 app.use('/v1',enrutamiento)
-
-
-
-
+app.set('view engine','ejs')
 
 app.listen(process.env.PORT,()=>{
     console.log ('servidor ejecuantaodse en el puerto '+process.env.PORT)
